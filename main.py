@@ -36,7 +36,7 @@ st.markdown("**Response**: 1 : Customer is interested, 0 : Customer is not inter
 
 #Dataset
 st.header("Simple Dataset")
-df=pd.read_csv(r"C:\Users\hayrullah.karaman\streamlit\train.csv")
+df=pd.read_csv("train.csv")
 st.table(df.sample(5,random_state=42))
 
 #Sidebar future get 
@@ -134,7 +134,7 @@ input_df = pd.DataFrame({
 from joblib import load
 
 
-filename=open(r"C:\Users\hayrullah.karaman\streamlit\xgbfinal.pkl","rb")
+filename=open("xgbfinal.pkl")
 model=load(filename)
 pred=model.predict(input_df.values)
 
