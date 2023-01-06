@@ -134,8 +134,8 @@ input_df = pd.DataFrame({
 from joblib import load
 
 
-filename=open("xgbfinal.pkl")
-model=load(filename)
+
+model=load("xgbfinal.pkl")
 pred=model.predict(input_df.values)
 
 # Sonuç Ekranı
